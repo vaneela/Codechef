@@ -21,7 +21,6 @@ int main()
         {
             if (v[i] > v[i + 1])
             {
-
                 swap(v[i], v[i + 1]);
                 break;
             }
@@ -32,9 +31,10 @@ int main()
             if (v[i] > v[i + 1])
             {
                 count++;
+                break;
             }
         }
-        if (count < 1)
+        if (!count)
         {
 
             cout << "YES\n";
