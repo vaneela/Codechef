@@ -30,19 +30,15 @@ int main()
         {
             if (v[i] > v[i + 1])
             {
-                count++;
+                cout << "NO\n";
+                count ++;
                 break;
             }
         }
-        if (!count)
-        {
-
-            cout << "YES\n";
+        if(!count){
+            cout <<"YES\n";
         }
-        else
-        {
-            cout << "NO\n";
-        }
+       
     }
     return 0;
 }
