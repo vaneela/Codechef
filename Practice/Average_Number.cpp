@@ -8,24 +8,26 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n, k, v;
-        cin >> n >> k >> v;
-        ll sum = 0, sum2;
-        for (int i = 0; i < n; i++)
+       int N, K, V, sum = 0;
+        cin >> N >> K >> V;
+        int arr[N];
+        for (int i = 0; i < N; i++)
         {
-            int x;
-            cin >> x;
-            sum += x;
+            cin >> arr[i];
+            sum += arr[i];
         }
-        sum2 = v * (n + k) - sum;
-        int ans = sum2 / k;
-        if (ans > 0 && (ans * k) == sum2)
+
+        int positive = ((V * (N + K) )- sum);
+        int value = ((V * (N + K) )- sum) % K;
+        int ans = (V * (N + K) - sum) / K;
+        
+        if (value != 0 || positive < 0)
         {
-            cout << ans << endl;
+            cout << "-1" << endl;
         }
         else
         {
-            cout << -1 << endl;
+            cout << ans << endl;
         }
     }
     return 0;
